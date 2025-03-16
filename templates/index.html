@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <title>My App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        /* ページ全体のスタイル */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        /* コンテンツを中央にまとめるコンテナ */
+        .container {
+            max-width: 500px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 30px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        p {
+            font-size: 16px;
+            color: #666;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        /* フォーム要素のスタイル */
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        input[type="file"] {
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007BFF; /* ボタン背景色 */
+            color: #fff;
+            padding: 10px 24px;
+            border: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3; /* ホバー時のボタン背景色 */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>PDFからポッドキャストを生成する</h1>
+    <p>PDFをアップロードしてポッドキャスト化してみましょう！</p>
+    <form action="/podcast" method="post" enctype="multipart/form-data">
+        <input type="file" name="pdf" accept="application/pdf" />
+        <input type="submit" value="アップロード" />
+    </form>
+</div>
+
+</body>
+</html>

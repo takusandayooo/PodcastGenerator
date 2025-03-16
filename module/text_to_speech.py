@@ -8,7 +8,7 @@ def tts(text, pitch,audio_path):
         volume="+10%",
         pitch=pitch,
     )
-    communicate.save_sync(f"{audio_path}.mp3")
+    communicate.save_sync(f"./static/{audio_path}.mp3")
 
 if __name__ == "__main__":
     tts("こんにちは", "-30Hz", "audio")
